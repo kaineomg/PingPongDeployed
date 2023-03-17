@@ -16,8 +16,8 @@ app.MapGet("/ping", async (context) =>
 
 app.MapGet("/info", async (context) =>
 {
-    var responseData = new { Message = "Число потоков:  ", Environment.ProcessorCount, 
-        Messsage= "Путь к системному каталогу:  ", Environment.SystemDirectory,Message2="OS Version",Environment.OSVersion};
+    var responseData = new { Message = "Count source:  ", Environment.ProcessorCount, 
+        Messsage= "Path to the system directory :  ", Environment.SystemDirectory,Message2="OS Version",Environment.OSVersion};
     await context.Response.WriteAsJsonAsync(responseData);
 
 });
